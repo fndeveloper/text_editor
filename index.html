@@ -74,6 +74,21 @@
 
 });
   // ======================= WITHOUT USINMG CDN JS CODE END =====================
+
+// ================== INNER HTML CODE START ===================
+  var rawHTML = doc.data().content;
+
+var temp = document.createElement("div");
+temp.innerHTML = rawHTML;
+
+var finalHTML = temp.querySelector(".ql-editor")?.innerHTML || "";
+
+course_row.innerHTML += `
+<div>
+  ${finalHTML}
+</div>
+`;
+  // ================ INNHER HTML CODE END =======================
 </script>
 
 </body>
